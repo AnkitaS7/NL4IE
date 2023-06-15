@@ -1,0 +1,521 @@
+/*
+ Theme Name:     Northeastern Academic/Admin
+ Theme URI:      https://www.elegantthemes.com/gallery/divi/
+ Description:    Northeastern Divi Theme for orgs, clubs, labs and more
+ Author:         Elegant Themes
+ Author URI:     https://www.elegantthemes.com
+ Template:       divi
+ Version:        1.0.5
+*/
+
+/*
+DIVI Breakpoints: 
+
+ Responsive Styles Large Desktop And Above
+@media all and (min-width: 1405px) {
+
+}
+
+ Responsive Styles Standard Desktop Only
+@media all and (min-width: 1100px) and (max-width: 1405px) {
+
+}
+
+Responsive Styles Tablet And Below
+@media all and (max-width: 980px) {
+
+}
+
+Responsive Styles Tablet Only
+@media all and (min-width: 768px) and (max-width: 980px) {
+
+}
+
+Responsive Styles Smartphone Only
+@media all and (max-width: 767px) {
+
+}
+
+Responsive Styles Smartphone Portrait
+@media all and (max-width: 479px) {
+
+}
+============================================*/
+
+/******************************
+ * Font and color variables
+ *******************************/
+
+/* Gradient colors */
+
+/******************************
+ * Color/gradient styles 
+ *******************************/
+
+.black {
+  background-color: #000;
+}
+
+.white {
+  background-color: #fff;
+}
+
+.red {
+  background-color: #d41b2c;
+}
+
+.tan-500 {
+  background-color: #e5d4ab;
+}
+
+.gray-cool-500 {
+  background-color: #99a3b0;
+}
+
+.gray-warm-500 {
+  background-color: #cfc7bf;
+}
+
+.gray-warm-700 {
+  background-color: #a19994;
+}
+
+.blue-900 {
+  background-color: #385775;
+}
+
+.blue-700 {
+  background-color: #006eb5;
+}
+
+.aqua-500 {
+  background-color: #52cfe5;
+}
+
+.teal-400 {
+  background-color: #00cfb5;
+}
+
+.green-500 {
+  background-color: #badb00;
+}
+
+.yellow-500 {
+  background-color: #ffbf3d;
+}
+
+.orange-500 {
+  background-color: #ff854f;
+}
+
+.bg-gradient-orange-tan-90deg {
+  background-image: linear-gradient(90deg, #ff854f, #e5d4ab);
+}
+
+.bg-gradient-yellow-orange-90deg {
+  background-image: linear-gradient(90deg, #ffbf3d, #ff854f);
+}
+
+.bg-gradient-green-yellow-90deg {
+  background-image: linear-gradient(90deg, #acca07, #ffbf3d);
+}
+
+.bg-gradient-aqua-blue-dark-90deg {
+  background-image: linear-gradient(90deg, #52cfe5, #2b435a);
+}
+
+.bg-gradient-blue-dark-teal-90deg {
+  background-image: linear-gradient(90deg, #2b435a, #00cfb5);
+}
+
+.bg-gradient-teal-green-90deg {
+  background-image: linear-gradient(90deg, #00cfb5, #acca07);
+}
+
+.bg-gradient-blue-green-90deg {
+  background-image: linear-gradient(90deg, #006eb5, #acca07);
+}
+
+.bg-gradient-blue-gray-cool-90deg {
+  background-image: linear-gradient(90deg, #006eb5, #99a3b0);
+}
+
+.bg-gradient-red-blue-90deg {
+  background-image: linear-gradient(90deg, #d41b2c, #006eb5);
+}
+
+.bg-gradient-aqua-yellow-90deg {
+  background-image: linear-gradient(90deg, #52cfe5, #ffbf3d);
+}
+
+.bg-gradient-yellow-blue-90deg {
+  background-image: linear-gradient(90deg, #ffbf3d, #006eb5);
+}
+
+/******************************
+ * Navigation styles
+ ******************************/
+
+nav#top-menu-nav {
+  display: flex;
+  width: 100%;
+  padding: 1.5rem 0 1rem 0;
+  justify-content: space-between;
+}
+
+@media (min-width: 981px) {
+  nav#top-menu-nav {
+    width: inherit;
+  }
+}
+
+nav#top-menu-nav,
+#et_mobile_nav_menu {
+  float: none;
+}
+
+#main-header {
+  /**
+   * So that the theme nav doesn't overlay NU global header dropdown menu when expanded
+   */
+  z-index: 10;
+  background-color: #fff !important;
+}
+
+#main-header .nu_menu_container {
+  z-index: 99;
+  width: 100%;
+  padding: 0 1rem;
+  text-align: left;
+  position: relative;
+  margin: auto;
+}
+
+@media only screen and (min-width: 981px) {
+  #main-header .nu_menu_container {
+    max-width: 100%;
+  }
+}
+
+#main-header a.logo svg {
+  vertical-align: middle;
+}
+
+#main-header #top-menu {
+  float: none;
+  display: flex;
+  align-items: center;
+  margin-right: 35px;
+  /** sub menu **/
+}
+
+@media (max-width: 980px) {
+  #main-header #top-menu {
+    display: none;
+  }
+}
+
+#main-header #top-menu li {
+  font-size: 15px !important;
+  padding: 0 15px;
+}
+
+#main-header #top-menu li:last-child {
+  padding-right: 0;
+}
+
+#main-header #top-menu li a {
+  font-size: 16px !important;
+  font-style: normal !important;
+  text-decoration: none !important;
+  text-transform: none !important;
+  color: #1f1f1f !important;
+  letter-spacing: normal !important;
+  font-weight: 600;
+}
+
+#main-header #top-menu li a:active {
+  color: #d41b2c !important;
+}
+
+#main-header #top-menu li.current-menu-item > a {
+  color: #d41b2c !important;
+  text-transform: none !important;
+}
+
+#main-header #top-menu.nav ul li a {
+  font-size: 14px !important;
+  line-height: 1.6em;
+}
+
+#main-header #top-menu.nav ul li a:hover {
+  background-color: transparent;
+  text-decoration: underline !important;
+}
+
+#main-header .et_mobile_menu {
+  background-color: #000 !important;
+  border-top: 3px solid #d41b2c !important;
+}
+
+#main-header .et_mobile_menu li a {
+  color: #fff !important;
+}
+
+.et_header_style_left #et-top-navigation nav > ul > li > a {
+  padding-bottom: 0.8rem !important;
+}
+
+#et-top-navigation {
+  float: none;
+  font-weight: 400;
+}
+
+@media (min-width: 981px) {
+  .et_non_fixed_nav.et_fullwidth_nav.et_header_style_left .logo_container {
+    padding-left: 60px;
+  }
+}
+
+.et_header_style_left #et-top-navigation {
+  padding: 0.5rem 0;
+}
+
+@media (min-width: 981px) {
+  #et-top-navigation {
+    float: right;
+    padding-left: 2.2rem;
+  }
+
+  .et_header_style_left #et-top-navigation {
+    margin-left: 35px;
+  }
+}
+
+@media (max-width: 980px) {
+  .et_header_style_left #et-top-navigation {
+    display: flex;
+    padding: 0.25rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.et_header_style_left #et-top-navigation .mobile_menu_bar {
+  padding-bottom: 0;
+}
+
+/** 
+* Change hamburger lines from white to black 
+*/
+
+@media only screen and (max-width: 980px) {
+  .mobile_menu_bar:before,
+  #et_search_icon:before {
+    color: #000 !important;
+  }
+}
+
+@media (min-width: 981px) {
+  .et_header_style_left .et-fixed-header #et-top-navigation nav > ul > li > a {
+    padding-bottom: 10px !important;
+  }
+}
+
+/**
+ * Override Divi hide logo setting so that if Hide Logo is ON from 
+ * Divi -> Theme Customizer -> Header and Navigation -> Primary Menu Bar 
+ * that the site still shows the site Title text. 
+ */
+
+@media (min-width: 981px) {
+  .et_hide_primary_logo #main-header:not(.et-fixed-header) .logo_container {
+    height: 100% !important;
+    opacity: 1 !important;
+  }
+}
+
+.site_name_textonly {
+  position: absolute;
+  top: 28%;
+  display: block;
+  padding-left: 10px;
+}
+
+.site_name_textonly a {
+  color: #000;
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+
+@media (min-width: 981px) {
+  .site_name_textonly {
+    top: 33%;
+    padding-left: 63px;
+  }
+}
+
+@media (min-width: 981px) and (max-width: 1350px) {
+  .mobile_menu_bar {
+    position: relative;
+    top: -10px;
+  }
+}
+
+/* Don't show white right vertical line in sub-menu last menu item */
+
+@media (min-width: 1230px) {
+  #top-menu .sub-menu .menu-item:last-child:after {
+    content: "";
+    border-left: none;
+    height: inherit;
+  }
+}
+
+#et-top-navigation {
+  display: flex;
+}
+
+#et_top_search {
+  float: none;
+  display: flex;
+  margin: 1.6em 2.2em 1.6em 0.5em;
+}
+
+@media (max-width: 980px) {
+  #et_top_search {
+    float: none;
+    display: flex;
+    margin: 0em 2.2em 2em 0.5em;
+  }
+}
+
+/****
+    END NAV STYLES
+***/
+
+a {
+  color: #006eb5;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+@media (max-width: 980px) {
+  .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    margin: 0;
+  }
+}
+
+body {
+  font-family: "Lato", Helvetica, Arial, Lucida, sans-serif;
+  /**
+   * Blurb number image in red circle for sites@northeastern
+   */
+  /**
+   * Side by side template create/preview buttons on home page
+   */
+  /** 
+   * Sidebar
+   */
+  /**
+   * Override default Divi 404 page and make full width.
+   */
+}
+
+@media (min-width: 981px) {
+  body.single-post #main-content .container {
+    padding-left: 3.9rem;
+    padding-right: 1.9rem;
+  }
+}
+
+body .sites-setup-steps img {
+  height: 40px;
+}
+
+body .sites-setup-steps .et_pb_main_blurb_image {
+  margin-bottom: 15px;
+}
+
+body .sites-setup-steps .et_pb_module_header {
+  padding-bottom: 25px;
+}
+
+body .sites-inline-btns .et_pb_button_module_wrapper {
+  display: inline-block;
+}
+
+@media (min-width: 981px) and (max-width: 1425px) {
+  body .sites-inline-btns .et_pb_button_module_wrapper {
+    margin-right: 0px !important;
+    display: block;
+  }
+}
+
+body #sidebar .widgettitle {
+  padding-bottom: 15px;
+}
+
+body #sidebar .et_pb_widget ul li {
+  margin-bottom: 0.3em;
+}
+
+body article.et_pb_post {
+  color: #1f1f1f;
+}
+
+body #left-area .post-meta a {
+  color: #006eb5;
+}
+
+@media (min-width: 981px) {
+  body.error404 #left-area,
+  body.search #left-area {
+    width: 100%;
+    padding: 0px !important;
+    float: none !important;
+  }
+}
+
+body.error404 #sidebar,
+body.search #sidebar {
+  display: none;
+}
+
+body.error404 #main-content > .container {
+  width: 100% !important;
+  max-width: none;
+  padding: 0px;
+}
+
+body.error404 #main-content > .container:before {
+  background: none;
+}
+
+body.search #main-content > .container {
+  width: 80% !important;
+  max-width: 1080px;
+  padding: 60px 0px 0px 0px;
+  margin: auto;
+}
+
+body.search #main-content > .container:before {
+  background: none;
+}
+
+.section-heading h2 {
+  font-size: 22px;
+}
+
+footer#main-footer {
+  display: none;
+}
+
